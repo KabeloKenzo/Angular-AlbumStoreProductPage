@@ -10,10 +10,11 @@ import { ProductListComponent } from './product-list/product-list.component';
 
 import { RouterModule, Routes } from '@angular/router';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: 'products', component: ProductListComponent },
-  { path: 'product/:id', component: ProductPageComponent}
+  { path: 'product/:id', component: ProductPageComponent},
   { path: '', redirectTo: 'products', pathMatch: 'full '}
 ];
 
@@ -26,6 +27,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
     RouterModule.forRoot(appRoutes)
   ],
